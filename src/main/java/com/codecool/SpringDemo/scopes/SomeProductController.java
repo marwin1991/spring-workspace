@@ -1,23 +1,22 @@
-package com.codecool.SpringDemo;
+package com.codecool.SpringDemo.scopes;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 @Lazy
 @Slf4j
 @RestController
-public class ProductController {
+public class SomeProductController {
 
     private String name;
 
-    private final ProductService productService;
+    private final SomeProductService someProductService;
 
     private final ProductHandler handler;
 
-    public ProductController(ProductService productService, ProductHandler handler){
-        this.productService = productService;
+    public SomeProductController(SomeProductService someProductService, ProductHandler handler){
+        this.someProductService = someProductService;
         this.handler = handler;
         log.info("Utworzono obiekt");
     }

@@ -1,4 +1,4 @@
-package com.codecool.SpringDemo;
+package com.codecool.SpringDemo.scopes;
 
 import com.google.gson.Gson;
 import org.springframework.context.annotation.Bean;
